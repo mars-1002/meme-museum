@@ -16,13 +16,14 @@
 </section>
 
 <section class="card-container">
-  {% for cat in cats %}
+  {% for meme in memes %}
     <div class="card">
       <div class="card-content">
         <div class="card-img-container">
         </div>
-        <h2 class="card-title">{{ cat.name }}</h2>
-        <p><small>{{ cat.description }}</small></p>
+        <h2 class="card-title">{{ meme.title }}</h2>
+        <img src="{{ meme.image }}" alt="Funny image of a dog meme">
+        <p><small>{{ meme.description }}</small></p>
       </div>
     </div>
   {% endfor %}

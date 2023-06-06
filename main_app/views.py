@@ -35,3 +35,6 @@ class MemeUpdate(UpdateView):
 class MemeDelete(DeleteView):
   model = Meme
   success_url = '/memes/'
+
+def meme_canvas(request):
+  return render(request, 'canvas.html')

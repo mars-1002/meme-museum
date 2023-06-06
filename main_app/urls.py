@@ -9,4 +9,5 @@ urlpatterns = [
   path('memes/create/', views.MemeCreate.as_view(), name='meme-create'),
   path('memes/<int:pk>/update/', views.MemeUpdate.as_view(), name='meme-update'),
   path('memes/<int:pk>/delete/', views.MemeDelete.as_view(), name='meme-delete'),
+  path('memes/canvas/', views.meme_canvas, name='meme-canvas')
 ]

@@ -2,6 +2,11 @@ html {
   box-sizing: border-box
 }
 
+@font-face {
+  font-family: "Yuruka";
+  src: url('../assets/fonts/FOT-YurukaStd-UB.otf');
+}
+
 /* The Universal Selector */
 *, /* All elements*/
 *::before, /* All ::before pseudo-elements */
@@ -22,9 +27,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 
-    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 
-    'Helvetica Neue', sans-serif;
+  font-family: 'Yuruka';
   min-height: 100vh;
   --nav-bg: rgba(104, 197, 248, .7);
   --nav-bg-ff: rgba(104, 197, 248, .9);

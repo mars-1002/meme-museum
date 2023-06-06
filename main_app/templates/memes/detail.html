@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link 
+  rel="stylesheet" 
+  type="text/css" 
+  href="{% static 'css/memes/meme-detail.css' %}"
+/>
+{% endblock head %}
+
+{% block content %}
+
+<section class="page-header">
+  <h1>{{ meme.title }}</h1>
+</section>
+
+<section>
+  <div>
+    <img src="{{ meme.image }}" alt="Image of a funny meme">
+  </div>
+  <div>
+    <h1>{{ meme.description }}</h1>
+  </div>
+  <div class="meme-actions">
+    <a href="{% url 'meme-update' meme.id %}" class="btn warn">Edit</a>
+    <a href="{% url 'meme-delete' meme.id %}" class="btn danger">Delete</a>
+  </div>
+</section>
+
+{% endblock content %}

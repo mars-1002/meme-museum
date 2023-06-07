@@ -11,27 +11,19 @@ var newText = document.getElementById('changeTextButton')
 
 // text stylization for the meme
 var colorIndex = ['#FF0000' , '#FFFF00' , '#0000FF']
-var colorRan = Math.floor(Math.random() * (3 - 0) + 0)
-console.log(colorRan)
-console.log(colorIndex[colorRan])
-// context.fillStyle = 'red'
-context.fillStyle = colorIndex[colorRan]
+var colorRan = Math.floor(Math.random() * (3))
 context.font = "bold 30px Comic Neue"
-
-console.log("Hello World")
+context.fillStyle = colorIndex[colorRan]
 
 // functions to gen new image from dog.ceo API
-function handleLoadImg (e) {
+function handleLoadImg () {
     context.drawImage(image, 0, 0, 500, 300)
     image.removeEventListener('load', handleLoadImg)
 }
 function genImage () {
     $.ajax('https://dog.ceo/api/breed/shiba/images/random').done(function(data) {
-    console.log(data)
     shibeImage = data.message
-    console.log(shibeImage)
     image.src=shibeImage
-
     image.addEventListener('load', handleLoadImg)
 })
 }
@@ -40,11 +32,10 @@ function genImage () {
 newText.addEventListener('click', changeMemeText)
 newText.addEventListener('click', newColorGen)
 
-function newColorGen (e) {
-    context.fillStyle = colorIndex[Math.floor(Math.random() * (3 - 0) + 0)]
-    console.log(context.fillStyle)
+function newColorGen () {
+    context.fillStyle = colorIndex[Math.floor(Math.random() * (3))]
 }
-function changeMemeText (e) {  
+function changeMemeText () {  
     memeText = document.getElementById('changeText').value
-    context.fillText(memeText, Math.random() * (425 - 75) + 75, Math.random() * (225 - 75) + 75) //src txt, x, y
+    context.fillText(memeText, Math.random() * (100) + 50, Math.random() * (150) + 50) //src txt, x, y
 }

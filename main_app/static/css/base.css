@@ -4,7 +4,7 @@ html {
 
 @font-face {
   font-family: "Yuruka";
-  src: url('../assets/fonts/FOT-YurukaStd-UB.otf');
+  src: url('../assets/fonts/');
 }
 
 /* The Universal Selector */
@@ -100,6 +100,11 @@ nav li {
   margin: auto;
   padding: 10px 20px 0;
   max-width: 500px;
+}
+
+.header-logo-container-banner {
+  max-height: 100px;
+  width: auto;
 }
 
 .page-header {

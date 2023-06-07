@@ -4,7 +4,7 @@ html {
 
 @font-face {
   font-family: "Yuruka";
-  src: url('../assets/fonts/');
+  src: local("Yuruka"), url('../fonts/FOT-YurukaStd-UB.otf') format("opentype");
 }
 
 /* The Universal Selector */

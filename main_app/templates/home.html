@@ -13,9 +13,25 @@
     class="logo-image" 
     src="{% static 'images/mememuseum-logo.png' %}" 
     alt="Meme Museum">
-    <p>Meme Museum</p>
   </div>
 </section>
+
+{% if not user.is_authenticated %}
+  <section>
+    <form action="{% url 'home' %}" method="post" class="login">
+      <h1>Welcome to Meme Museum!</h1>
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="hidden" name="next" value="{{ next }}">
+      <button type="submit" class="btn submit">Login</button>
+    </form>
+    <br>
+    <div class="login">
+      <h1>Not a user?</h1>
+      <a href="{% url 'signup' %}"><button class="btn submit">Sign Up</button></a>
+    </div>
+  </section>
+{% endif %}
 
 {% endblock content %}
 

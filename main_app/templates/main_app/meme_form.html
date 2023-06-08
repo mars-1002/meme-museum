@@ -8,27 +8,13 @@
 {% block content %}
 
 <div class="page-header">
-  <h1>Create a Meme</h1>
+  <h1>Upload a Meme</h1>
 </div>
-{% comment %} 
-  Leaving the action empty makes the form post to the same url used to display it
-{% endcomment %}
+
 <form action="" method="post" class="form-container" enctype="multipart/form-data">
-  {% comment %} 
-    Django requires the following for security purposes
-  {% endcomment %}
   {% csrf_token %}
   <table>
-    {% comment %}
-      Render the inputs inside of <tr>s & <td>s
-    {% endcomment %}
     {{ form.as_table }}
-    {% comment %} <p>Title</p>
-    {{ form.title }}
-    <p>Description</p>
-    {{ form.description }}
-    <p>Choose photo</p>
-    <input type="file" name="photo-file" id="{% static form.image %}"> {% endcomment %}
   </table>
   <button type="submit" class="btn submit">Submit!</button>
 </form>

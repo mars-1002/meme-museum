@@ -31,7 +31,7 @@ def meme_detail(request, meme_id):
 
 class MemeCreate(LoginRequiredMixin, CreateView):
   model = Meme
-  fields = '__all__'
+  fields = ['title', 'image', 'description']
   success_url = '/memes/'
 
   def form_valid(self, form):
@@ -40,8 +40,7 @@ class MemeCreate(LoginRequiredMixin, CreateView):
 
 class MemeUpdate(LoginRequiredMixin, UpdateView):
   model = Meme
-  # Let's disallowmthe renaming of a Meme by excluding the name field!
-  fields = '__all__'
+  fields = ['title', 'description']
 
 class MemeDelete(LoginRequiredMixin, DeleteView):
   model = Meme

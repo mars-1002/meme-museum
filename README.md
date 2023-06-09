@@ -1,6 +1,13 @@
+![Meme Museum Banner](./main_app/static/images/mememuseum-bannerWHITE.png)
+
 # [Click here to check out Meme Museum!](https://meme-museum.fly.dev/)
 
 ## Getting Started
+1. Visit Meme Museum [here](https://meme-museum.fly.dev/)
+2. Log in or Sign up to access the Gallery or Create a meme.
+3. Click on "Create" to make your very own doge meme!
+4. Click on "Gallery" to view other's submissions!
+5. Click on "Upload" to contribute to the gallery!
 
 ## Highlight
 <p>Meme Museum uses jquery to add a event listener to a HTML canvas. This feature allows the user to dynamically create a new meme only using HTML + JS.</p>

@@ -2,6 +2,9 @@
 
 # [Click here to check out Meme Museum!](https://meme-museum.fly.dev/)
 
+![Meme Museum Gallery Page](./main_app/static/images/screenshot-1.png)
+![Meme Museum Create Page](./main_app/static/images/screenshot-2.png)
+
 ## Getting Started
 1. Visit Meme Museum [here](https://meme-museum.fly.dev/)
 2. Log in or Sign up to access the Gallery or Create a meme.
@@ -10,7 +13,7 @@
 5. Click on "Upload" to contribute to the gallery!
 
 ## Highlight
-<p>Meme Museum uses jquery to add a event listener to a HTML canvas. This feature allows the user to dynamically create a new meme only using HTML + JS.</p>
+<p>Meme Museum uses JQuery to add a event listener to a HTML canvas. This feature allows the user to dynamically create a new meme only using HTML + JS.</p>
 
 ```
 function handleLoadImg () {

@@ -21,7 +21,7 @@ def about(request):
 
 @login_required
 def meme_index(request):
-  memes = Meme.objects.all()
+  memes = Meme.objects.all().order_by("-id")
   return render(request, 'memes/index.html', { 'memes': memes })
 
 @login_required

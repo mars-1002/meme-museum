@@ -31,6 +31,14 @@
       <a href="{% url 'signup' %}"><button class="btn submit">Sign Up</button></a>
     </div>
   </section>
+{% else %}
+  <section>
+    <div class="login">
+      <h1>Welcome back, {{ user }}</h1>
+      <a href="{% url 'meme-canvas' %}"><button class="btn   submit">Create a Meme</button></a>
+      <a href="{% url 'meme-index' %}"><button class="btn   submit">Meme Gallery</button></a>
+    </div>
+  </section>
 {% endif %}
 
 {% endblock content %}

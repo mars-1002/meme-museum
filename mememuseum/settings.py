@@ -27,7 +27,7 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'meme-museum.fly.dev']
 CSRF_TRUSTED_ORIGINS = ['https://meme-museum.fly.dev']
@@ -135,7 +135,7 @@ STATIC_URL = 'static/'
 
 LOGOUT_REDIRECT_URL = 'home'
 
-LOGIN_REDIRECT_URL = 'meme-index'
+LOGIN_REDIRECT_URL = 'home'
 
 LOGOUT_REDIRECT_URL = 'home'
 

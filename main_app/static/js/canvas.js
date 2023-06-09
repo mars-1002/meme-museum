@@ -10,6 +10,9 @@ var newDogeBtn = document.getElementById("newDoge")
 newDogeBtn.addEventListener("click", genImage)
 var memeText = document.getElementById('changeText').value
 var newText = document.getElementById('changeTextButton')
+const downloadImage = document.getElementById("downloadImageButton")
+
+
 
 // text stylization for the meme
 var colorIndex = ['#FF0000' , '#FFFF00' , '#0000FF']
@@ -35,6 +38,15 @@ function genImage () {
 // js to put text on canvas
 newText.addEventListener('click', changeMemeText)
 newText.addEventListener('click', newColorGen)
+downloadImage.addEventListener('click', downloadMeme)
+
+function downloadMeme () {
+    var downloadedImage = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+    var link = document.createElement('a');
+    link.download = "my-image.png";
+    link.href = image;
+    link.click();
+}
 
 function newColorGen () {
     context.fillStyle = colorIndex[Math.floor(Math.random() * (3))]

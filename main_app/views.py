@@ -62,6 +62,3 @@ def signup(request):
   form = UserCreationForm()
   context = {'form': form, 'error_message': error_message}
   return render(request, 'signup.html', context)
-
-def page_not_found(request, exception):
-    return render(request, '404.html', status=404)

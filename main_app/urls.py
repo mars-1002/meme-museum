@@ -11,4 +11,5 @@ urlpatterns = [
   path('memes/<int:pk>/delete/', views.MemeDelete.as_view(), name='meme-delete'),
   path('memes/canvas/', views.meme_canvas, name='meme-canvas'),
   path('accounts/signup/', views.signup, name='signup'),
+  path('*/', views.page_not_found, name="404")
 ]

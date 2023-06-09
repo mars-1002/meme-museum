@@ -21,16 +21,16 @@
     <button type="submit" class="btn danger">Yes - Delete!</button>
   </form>
 {% else %}
-<div class="page-header">
-  <h1>Permission Denied!</h1>
-</div>
-<img
+  <div class="page-header">
+    <h1>Permission Denied!</h1>
+  </div>
+  <img
     class="logo-image" 
     src="{% static 'images/mememuseum-denied.png' %}" 
     alt="Meme Museum"
   />
-<h2>You do not have the current permissions to acces this page.</h2>
-<a href="{% url 'meme-index' %}"><button class="btn submit">Return to the Gallery</button></a>
+  <h2>You do not have the current permissions to acces this page.</h2>
+  <a href="{% url 'meme-index' %}"><button class="btn submit">Return to the Gallery</button></a>
 {% endif %}
 
 

@@ -45,6 +45,10 @@ function genImage () {
 ![Meme Museum ERD](./main_app/static/assets/ERD.png)
 
 ## IceBox
+- Add Direct Upload from Create Page
+- Add 404 Page
+- Be able to "Like" a meme
+- Be able to "Comment" on a meme
 
 ## Attributions
 - [Dog.ceo Dog API](https://dog.ceo/dog-api/)

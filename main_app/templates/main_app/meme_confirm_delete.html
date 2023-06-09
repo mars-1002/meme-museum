@@ -3,20 +3,35 @@
 
 {% block content %}
 
-<div class="page-header">
-  <h1>Delete Cat?</h1>
-</div>
-<h2>Are you sure you want to delete {{ meme.title }}?</h2>
 
-<form action="" method="post" class="form">
-  {% csrf_token %}
-  <a 
-    href="{% url 'meme-detail' meme.id %}" 
-    class="btn secondary"
-  >
-    Cancel
-  </a>
-  <button type="submit" class="btn danger">Yes - Delete!</button>
-</form>
+{% if user == meme.user %}
+  <div class="page-header">
+    <h1>Delete Meme?</h1>
+  </div>
+  <h2>Are you sure you want to delete {{ meme.title }}?</h2>
+
+  <form action="" method="post" class="form">
+    {% csrf_token %}
+    <a 
+      href="{% url 'meme-detail' meme.id %}" 
+      class="btn secondary"
+    >
+      Cancel
+    </a>
+    <button type="submit" class="btn danger">Yes - Delete!</button>
+  </form>
+{% else %}
+<div class="page-header">
+  <h1>Permission Denied!</h1>
+</div>
+<img
+    class="logo-image" 
+    src="{% static 'images/mememuseum-denied.png' %}" 
+    alt="Meme Museum"
+  />
+<h2>You do not have the current permissions to acces this page.</h2>
+<a href="{% url 'meme-index' %}"><button class="btn submit">Return to the Gallery</button></a>
+{% endif %}
+
 
 {% endblock %}

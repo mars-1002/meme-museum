@@ -3,8 +3,7 @@
 
 {% block head %}
 <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&display=swap" rel="stylesheet">
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 <script defer src="{% static 'js/canvas.js' %}"></script>
 
 <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
@@ -18,9 +17,10 @@
   <h1>To create a meme, generate a new dog image and enter the text!</h1>
   
   <!-- section to hold canvas and image  -->
+  
   <button id="newDoge" class="btn submit">click for new dog!</button>
   <img src="https://media.discordapp.net/attachments/694365499420835841/890258022083993640/40zAUTCs5iAAAAABJRU5ErkJggg.png" alt="source picture of dog" id="shibe">
-  <canvas id="canvas" width="500" height="300"></canvas>
+  <canvas id="canvas" width="500" height="300">Hello</canvas> 
 
   <!-- buttons to customize, save, etc  -->
   <input id="changeText"></input type="text">

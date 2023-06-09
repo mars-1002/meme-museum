@@ -7,16 +7,41 @@
 
 {% block content %}
 
-<div class="page-header">
-  <h1>Upload a Meme</h1>
-</div>
+{% if not meme %}
+  <div class="page-header">
+    <h1>Upload a Meme</h1>
+  </div>
 
-<form action="" method="post" class="form-container" enctype="multipart/form-data">
+  <form action="" method="post" class="form-container" enctype="multipart/form-data">
   {% csrf_token %}
-  <table>
-    {{ form.as_table }}
-  </table>
-  <button type="submit" class="btn submit">Submit!</button>
-</form>
+    <table>
+      {{ form.as_table }}
+    </table>
+    <button type="submit" class="btn submit">Submit!</button>
+  </form>
+{% elif user == meme.user %}
+  <div class="page-header">
+      <h1>Edit {{ meme.title }}</h1>
+  </div>
+
+  <form action="" method="post" class="form-container" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table>
+      {{ form.as_table }}
+    </table>
+    <button type="submit" class="btn submit">Submit!</button>
+  </form>
+{% else %}
+  <div class="page-header">
+    <h1>Permission Denied!</h1>
+  </div>
+  <img
+    class="logo-image" 
+    src="{% static 'images/mememuseum-denied.png' %}" 
+    alt="Meme Museum"
+  />
+  <h2>You do not have the current permissions to acces this page.</h2>
+  <a href="{% url 'meme-index' %}"><button class="btn submit">Return to the Gallery</button></a>
+{% endif %}
 
 {% endblock %}

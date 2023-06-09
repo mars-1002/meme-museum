@@ -84,3 +84,8 @@ main > section {
     max-width: 520px;
   }
 }
+
+
+canvas {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}

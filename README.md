@@ -45,3 +45,4 @@ function genImage () {
 - [fly.io App Deployment](https://fly.io/)
 - [Whimsical](https://whimsical.com/)
 - [Amazon AWS S3](https://aws.amazon.com/s3/)
+- [Fontworks Yuruka STD](https://en.fontworks.co.jp/)

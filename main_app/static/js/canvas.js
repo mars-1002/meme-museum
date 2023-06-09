@@ -41,10 +41,10 @@ newText.addEventListener('click', newColorGen)
 downloadImage.addEventListener('click', downloadMeme)
 
 function downloadMeme () {
-    var downloadedImage = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+    var downloadMeme = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
     var link = document.createElement('a');
     link.download = "my-image.png";
-    link.href = image;
+    link.href = downloadMeme;
     link.click();
 }
 
